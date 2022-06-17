@@ -3,11 +3,23 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEditor;
+using UnityEngine.UI;
 
 public class ButtonManager : MonoBehaviour
 {
     [SerializeField]
     private GameObject levelSelector, mainMenu;
+    [SerializeField]
+    private GameObject[] _levelButtons;
+
+    private void Start() 
+    {
+        if(SceneManager.GetActiveScene().buildIndex == 0)
+        {
+            CheckButtonLevel();
+        }
+    }
+    
     // reset the scene
     public void ResetScene()
     {
@@ -45,5 +57,20 @@ public class ButtonManager : MonoBehaviour
         #else
         Application.Quit();
         #endif
+    }
+
+    public void NextLevel()
+    {
+        LevelLoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+    }
+
+    public void CheckButtonLevel()
+    {
+        MainManager.instance.LoadLevel();
+        int levels = MainManager.instance.levelAcquired;
+        for(int i = 0;  i < levels; i++)
+        {
+            _levelButtons[i].GetComponent<Button>().interactable = true;
+        }
     }
 }
