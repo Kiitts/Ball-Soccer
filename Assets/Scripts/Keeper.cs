@@ -2,10 +2,12 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class KeeperMove : MonoBehaviour
+public abstract class Keeper : MonoBehaviour
 {
-    public float speed;
-    public float kickStrength;
+    private float speed = 10;
+    private float kickStrength = 10;
+    protected abstract void SetColor();
+
 
     // Update is called once per frame
     void FixedUpdate()
@@ -26,8 +28,12 @@ public class KeeperMove : MonoBehaviour
         // kick the ball
         if(other.gameObject.CompareTag("Ball"))
         {
-            other.rigidbody.AddForce(transform.forward * -1 * kickStrength, ForceMode.Impulse);
-            Debug.Log("wt");
+            BallHandle(other);
         }
+    }
+
+    private void BallHandle(Collision other)
+    {
+        other.rigidbody.AddForce(transform.forward * -1 * kickStrength, ForceMode.Impulse);
     }
 }

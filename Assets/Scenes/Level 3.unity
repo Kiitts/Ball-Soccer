@@ -448,6 +448,23 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 22c628d2370676e4f879db2829b5334c, type: 3}
+--- !u!1 &359678608 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 9108461658376977307, guid: 6f26c64d756169b448a9849389540c2e, type: 3}
+  m_PrefabInstance: {fileID: 9108461659364034434}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &359678610
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 359678608}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5bbaf1358ef86844997468261949e57d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &376272513
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2517,5 +2534,7 @@ PrefabInstance:
       propertyPath: m_Name
       value: Goal Keeper
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 9108461658376977308, guid: 6f26c64d756169b448a9849389540c2e, type: 3}
+    - {fileID: 3888907739979776495, guid: 6f26c64d756169b448a9849389540c2e, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 6f26c64d756169b448a9849389540c2e, type: 3}
