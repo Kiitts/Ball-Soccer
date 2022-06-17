@@ -44,9 +44,16 @@ public class MainManager : MonoBehaviour
         public int levelAcquired = 1;
     }
 
-    public void SaveLevel(int level)
+    public void SaveLevel(int level, bool force = false)
     {
-        levelAcquired = level;
+        if(force)
+        {
+            _levelAcquired = level;
+        }
+        else
+        {
+            levelAcquired = level;
+        }
         SavedData data = new SavedData();
         data.levelAcquired = levelAcquired;
 

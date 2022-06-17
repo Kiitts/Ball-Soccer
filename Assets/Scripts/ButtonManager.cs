@@ -66,11 +66,26 @@ public class ButtonManager : MonoBehaviour
 
     public void CheckButtonLevel()
     {
+        ResetButton();
         MainManager.instance.LoadLevel();
         int levels = MainManager.instance.levelAcquired;
         for(int i = 0;  i < levels; i++)
         {
             _levelButtons[i].GetComponent<Button>().interactable = true;
+        }
+    }
+
+    public void ResetProgress()
+    {
+        MainManager.instance.SaveLevel(1, true);
+        CheckButtonLevel();
+    }
+
+    void ResetButton()
+    {
+        foreach (var item in _levelButtons)
+        {
+            item.GetComponent<Button>().interactable = false;
         }
     }
 }
