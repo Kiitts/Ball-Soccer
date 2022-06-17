@@ -32,8 +32,8 @@ public abstract class Keeper : MonoBehaviour
         }
     }
 
-    private void BallHandle(Collision other)
+    protected virtual void BallHandle(Collision other)
     {
-        other.rigidbody.AddForce(transform.forward * -1 * kickStrength, ForceMode.Impulse);
+        other.rigidbody.AddForce(transform.right * -1 * kickStrength, ForceMode.Impulse);
     }
 }

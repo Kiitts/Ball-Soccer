@@ -6,7 +6,7 @@ public class RedKeeper : Keeper
 {
     protected override void SetColor()
     {
-        GetComponent<Renderer>().material.color = Color.blue;
+        GetComponent<Renderer>().material.color = Color.red;
     }
 
     private void Start() 
