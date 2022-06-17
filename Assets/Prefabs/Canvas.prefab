@@ -568,8 +568,8 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 3192807923603220563, guid: 734dfd69718ca7f4e8c0b1991cf5ca89, type: 3}
         m_TargetAssemblyTypeName: ButtonManager, Assembly-CSharp
-        m_MethodName: LevelLoadScene
-        m_Mode: 5
+        m_MethodName: NextLevel
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
